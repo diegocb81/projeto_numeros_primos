@@ -11,7 +11,21 @@ public class Main {
         for (int i=0; i<=meuNum; i++){
             lista.add(i);
         }
-        System.out.println(lista);
+        for (int i=0; i<lista.size(); i++){
+            boolean primo = true;
+            for (int j=2; j<lista.get(i); j++){
+                if (lista.get(i) % j == 0){
+                    primo = false;
+                    break;
+                }
+            }
+
+            if (primo){
+                System.out.println(lista.get(i)+", ");
+            }
+
+        }
+
     }
 
 }
